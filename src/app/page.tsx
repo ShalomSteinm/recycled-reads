@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   const books = [
@@ -24,12 +25,18 @@ export default function Home() {
   ];
   return (
     <>
-      <h1 style={{ marginBottom: "0px" }}>Recycled Reads</h1>
-      <h3 style={{ marginTop: "0.25rem" }}>Online Used Book Marketplace</h3>
+      <h1 className="text-xl" style={{ marginBottom: "0px" }}>Recycled Reads</h1>
+      <h3 className="text-l" style={{ marginTop: "0.25rem" }}>Online Used Book Marketplace</h3>
+      <nav className="flex justify-center">
+        <Link className="px-5  border-b border-transparent hover:border-purple-700" href="#">Fiction</Link>
+        <Link className="px-5  border-b border-transparent hover:border-purple-700" href="#">Non-Fiction</Link>
+        <Link className="px-5  border-b border-transparent hover:border-purple-700" href="#">Kids</Link>
+        <Link className="px-5  border-b border-transparent hover:border-purple-700" href="#">Education</Link>
+        <Link className="px-5  border-b border-transparent hover:border-purple-700" href="#">Mystery & Suspence</Link>
+      </nav>
       <header style={{ textAlign: "center", marginTop: "2rem" }}>
-        Top 100 Bestselling Books
+        Fiction
       </header>
-
       <section className={styles["book-list"]}>
         {books.map((book) => (
           <div className={styles["book"]} key={book.id}>
