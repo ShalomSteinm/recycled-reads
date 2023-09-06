@@ -26,12 +26,28 @@ export default function Home() {
   return (
     <>
       <header className="p-7">
-        <h1
-          className="text-2xl font-mono font-bold"
-          style={{ marginBottom: "0px" }}
-        >
-          Recycled Reads
-        </h1>
+        <div className=" flex justify-between">
+          <h1
+            className="text-2xl font-mono font-bold"
+            style={{ marginBottom: "0px" }}
+          >
+            Recycled Reads
+          </h1>
+          <Link
+            className="px-5  border-b border-transparent hover:border-purple-700 relative"
+            href="#"
+          >
+            <Image
+              width="25"
+              height="25"
+              src="./cart.svg"
+              alt="Shopping Cart"
+            ></Image>
+            <span className="absolute bg-red-600 text-xs font-semibold w-4 h-4 text-gray-50 rounded-full text-center bottom-[14px] right-[16px]">
+              4
+            </span>
+          </Link>
+        </div>
         <h3 className="text-m">Online Used Book Marketplace</h3>
         <nav className="flex justify-center">
           <Link
